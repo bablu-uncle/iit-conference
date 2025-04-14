@@ -6,6 +6,222 @@
     <title>Important Dates - Symposium 2025</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Base styles */
+        .dates-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .dates-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .date-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .date-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .date-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .date-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .date-month {
+            font-size: 1.25rem;
+            color: #7f8c8d;
+            display: block;
+        }
+        
+        .date-year {
+            font-size: 1rem;
+            color: #95a5a6;
+        }
+        
+        .date-content {
+            text-align: center;
+        }
+        
+        .date-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .date-content p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Extra Small (xs) - Mobile phones */
+        @media (min-width: 320px) {
+            .dates-container {
+                padding: 1rem;
+            }
+            
+            .date-card {
+                padding: 1.25rem;
+            }
+            
+            .date-number {
+                font-size: 2rem;
+            }
+            
+            .date-month {
+                font-size: 1.1rem;
+            }
+            
+            .date-content h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Small (sm) - Large phones/Small tablets */
+        @media (min-width: 576px) {
+            .dates-container {
+                padding: 1.5rem;
+            }
+            
+            .dates-grid {
+                gap: 1.75rem;
+            }
+            
+            .date-card {
+                padding: 1.5rem;
+            }
+            
+            .date-number {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* Medium (md) - Tablets */
+        @media (min-width: 768px) {
+            .dates-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .date-card {
+                padding: 1.75rem;
+            }
+            
+            .date-number {
+                font-size: 2.5rem;
+            }
+            
+            .date-month {
+                font-size: 1.25rem;
+            }
+            
+            .date-content h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Large (lg) - Laptops/Desktops */
+        @media (min-width: 992px) {
+            .dates-container {
+                padding: 2rem;
+            }
+            
+            .dates-grid {
+                gap: 2.5rem;
+            }
+            
+            .date-card {
+                padding: 2rem;
+            }
+            
+            .date-number {
+                font-size: 3rem;
+            }
+            
+            .date-month {
+                font-size: 1.5rem;
+            }
+            
+            .date-year {
+                font-size: 1.2rem;
+            }
+            
+            .date-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .date-content p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Extra Large (xl) - Large Desktops */
+        @media (min-width: 1200px) {
+            .dates-container {
+                max-width: 1400px;
+            }
+            
+            .dates-grid {
+                gap: 3rem;
+            }
+            
+            .date-card {
+                padding: 2.5rem;
+            }
+        }
+
+        /* Extra Extra Large (xxl) - Very Large Desktops */
+        @media (min-width: 1400px) {
+            .dates-container {
+                max-width: 1600px;
+            }
+            
+            .dates-grid {
+                gap: 3.5rem;
+            }
+            
+            .date-card {
+                padding: 3rem;
+            }
+            
+            .date-number {
+                font-size: 3.5rem;
+            }
+            
+            .date-month {
+                font-size: 1.75rem;
+            }
+            
+            .date-year {
+                font-size: 1.4rem;
+            }
+            
+            .date-content h3 {
+                font-size: 1.75rem;
+            }
+            
+            .date-content p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -14,62 +230,32 @@
         <section class="dates-section">
             <div class="section-header">
                 <h1>Important Dates</h1>
-                <p class="subtitle">Mark your calendars for these key milestones</p>
+                <p class="subtitle">Mark your calendars for the symposium</p>
             </div>
             
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="date">
-                            <span class="day">14</span>
-                            <span class="month">April</span>
-                            <span class="year">2025</span>
+            <div class="dates-container">
+                <div class="dates-grid">
+                    <div class="date-card">
+                        <div class="date-header">
+                            <span class="date-number">4</span>
+                            <span class="date-month">September</span>
+                            <span class="date-year">2025</span>
                         </div>
-                        <div class="event">
-                            <h3>Abstract submission and Registration open</h3>
-                            <p>Start of the submission and registration process</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="date">
-                            <span class="day">14</span>
-                            <span class="month">July</span>
-                            <span class="year">2025</span>
-                        </div>
-                        <div class="event">
-                            <h3>Abstract submission and Early-Bird Registration end</h3>
-                            <p>Last date for early-bird registration and abstract submission</p>
+                        <div class="date-content">
+                            <h3>Day 1 of Symposium</h3>
+                            <p>Opening Ceremony and Keynote Sessions</p>
                         </div>
                     </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="date">
-                            <span class="day">14</span>
-                            <span class="month">August</span>
-                            <span class="year">2025</span>
+                    <div class="date-card">
+                        <div class="date-header">
+                            <span class="date-number">5</span>
+                            <span class="date-month">September</span>
+                            <span class="date-year">2025</span>
                         </div>
-                        <div class="event">
-                            <h3>Abstract submission and Regular Registration end</h3>
-                            <p>Final deadline for regular registration and abstract submission</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item highlight">
-                    <div class="timeline-content">
-                        <div class="date">
-                            <span class="day">4-5</span>
-                            <span class="month">September</span>
-                            <span class="year">2025</span>
-                        </div>
-                        <div class="event">
-                            <h3>Symposium Dates</h3>
-                            <p>Main conference days</p>
+                        <div class="date-content">
+                            <h3>Day 2 of Symposium</h3>
+                            <p>Technical Sessions and Closing Ceremony</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +265,6 @@
 
     <div id="footer-placeholder"></div>
 
-    <!-- Load components.js -->
     <script src="components.js"></script>
 </body>
 </html> 

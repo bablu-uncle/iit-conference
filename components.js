@@ -15,7 +15,6 @@ const navbarHTML = `
                 <ul class="dropdown-content">
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="dates.html">Important Dates</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
                     <li><a href="authors.html">Information for Authors</a></li>
                 </ul>
             </div>

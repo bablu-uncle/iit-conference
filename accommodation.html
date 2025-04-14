@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2196f3">
     <title>Accommodation - Conference Center, IIT Guwahati</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -166,7 +167,7 @@
                 // Optional parameters
                 loop: true,
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 20,
                 centeredSlides: true,
                 autoplay: {
                     delay: 5000,
@@ -187,16 +188,45 @@
                 
                 // Responsive breakpoints
                 breakpoints: {
+                    // when window width is >= 480px
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
                     // when window width is >= 768px
                     768: {
                         slidesPerView: 1,
+                        spaceBetween: 30
                     },
                     // when window width is >= 1024px
                     1024: {
                         slidesPerView: 1,
+                        spaceBetween: 40
                     }
                 }
             });
+
+            // Add touch event handling for better mobile experience
+            const touchStartX = 0;
+            const touchEndX = 0;
+
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            document.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                if (touchStartX - touchEndX > 50) {
+                    swiper.slideNext();
+                }
+                if (touchEndX - touchStartX > 50) {
+                    swiper.slidePrev();
+                }
+            }
         });
     </script>
 </body>

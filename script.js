@@ -198,27 +198,41 @@ window.addEventListener("scroll", () => {
 });
 
 // Hero Carousel functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const heroSlides = document.querySelectorAll('.hero-slide');
-    if (heroSlides.length > 0) {
-        let currentSlide = 0;
-        
-        function showSlide(index) {
-            // Remove active class from all slides
-            heroSlides.forEach(slide => slide.classList.remove('active'));
-            // Add active class to current slide
-            heroSlides[index].classList.add('active');
-        }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % heroSlides.length;
-            showSlide(currentSlide);
-        }
-        
-        // Auto-advance slides every 5 seconds
-        setInterval(nextSlide, 5000);
-        
-        // Initialize first slide
-        showSlide(0);
+document.addEventListener("DOMContentLoaded", function () {
+  const heroSlides = document.querySelectorAll(".hero-slide");
+  if (heroSlides.length > 0) {
+    let currentSlide = 0;
+    let isTransitioning = false;
+
+    function showSlide(index) {
+      if (isTransitioning) return;
+
+      isTransitioning = true;
+
+      // Remove active class from all slides
+      heroSlides.forEach((slide) => slide.classList.remove("active"));
+
+      // Small delay to ensure the opacity transition starts cleanly
+      setTimeout(() => {
+        // Add active class to current slide
+        heroSlides[index].classList.add("active");
+      }, 50);
+
+      // Reset transition flag after CSS transition completes (1.5s + buffer)
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 1600);
     }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      showSlide(currentSlide);
+    }
+
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize first slide
+    showSlide(0);
+  }
 });

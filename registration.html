@@ -74,22 +74,449 @@
         margin-bottom: 1.5rem;
         font-size: 2rem;
         font-weight: 700;
-      }
+      } /* Enhanced Responsive Design */
+      @media (max-width: 1024px) {
+        .registration-section {
+          padding: 60px 1.5rem 3rem;
+        }
 
-      @media (max-width: 768px) {
-        .registration-fees {
-          flex-direction: column;
-          align-items: center;
+        .registration-content {
+          padding: 2.5rem;
+        }
+
+        .registration-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .registration-status {
+          padding: 2.5rem 1.5rem;
+        }
+
+        .registration-status h2 {
+          font-size: 1.8rem;
+        }
+
+        .registration-status .status-icon i {
+          font-size: 2.5rem;
         }
 
         .fee-category {
           min-width: 280px;
-          max-width: 280px;
-          width: 100%;
+          max-width: 320px;
+          height: 160px;
+          padding: 1.5rem;
+        }
+
+        .fee-category h3 {
+          font-size: 1rem;
         }
 
         .fee-amount {
           font-size: 2rem;
+        }
+
+        .registration-info h3 {
+          font-size: 1.6rem;
+        }
+
+        .info-card {
+          padding: 1.8rem;
+        }
+
+        .info-card h4 {
+          font-size: 1.2rem;
+        }
+
+        .info-card p {
+          font-size: 0.95rem;
+        }
+
+        .info-icon {
+          font-size: 2.2rem;
+          width: 70px;
+          height: 70px;
+        }
+
+        /* Page Hero Responsive Styles */
+        .page-hero {
+          padding: 100px 0 80px;
+        }
+
+        .page-hero h1 {
+          font-size: 2.8rem;
+        }
+
+        .page-hero p {
+          font-size: 1.1rem;
+          max-width: 600px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .registration-section {
+          padding: 50px 1rem 2rem;
+        }
+
+        .registration-content {
+          padding: 2rem;
+        }
+
+        .registration-content h1 {
+          font-size: 2rem;
+        }
+
+        .registration-status {
+          padding: 2rem 1rem;
+        }
+
+        .registration-status h2 {
+          font-size: 1.6rem;
+        }
+
+        .registration-status .status-icon i {
+          font-size: 2.2rem;
+        }
+
+        .registration-fees {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+        }
+
+        .fee-category {
+          min-width: 280px;
+          max-width: 320px;
+          width: 100%;
+          height: 140px;
+          padding: 1.5rem;
+        }
+
+        .fee-category h3 {
+          font-size: 1rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .fee-amount {
+          font-size: 1.8rem;
+        }
+
+        .registration-info h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .info-card {
+          padding: 1.5rem;
+        }
+
+        .info-card h4 {
+          font-size: 1.1rem;
+        }
+
+        .info-card p {
+          font-size: 0.9rem;
+        }
+
+        .info-icon {
+          font-size: 2rem;
+          width: 60px;
+          height: 60px;
+        }
+
+        .page-hero {
+          padding: 80px 0 60px;
+        }
+
+        .page-hero h1 {
+          font-size: 2.2rem;
+          margin-bottom: 1rem;
+        }
+
+        .page-hero p {
+          font-size: 1rem;
+          max-width: 500px;
+          padding: 0 1rem;
+        }
+
+        .page-hero .container {
+          padding: 0 1rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .registration-section {
+          padding: 40px 0.8rem 1.5rem;
+        }
+
+        .registration-content {
+          padding: 1.5rem;
+        }
+
+        .registration-content h1 {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+        }
+
+        .registration-status {
+          padding: 1.5rem 0.8rem;
+          margin-bottom: 2rem;
+        }
+
+        .registration-status h2 {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+
+        .registration-status .status-icon i {
+          font-size: 2rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .fee-category {
+          min-width: 260px;
+          max-width: 280px;
+          height: 130px;
+          padding: 1.2rem;
+        }
+
+        .fee-category h3 {
+          font-size: 0.95rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.2;
+        }
+
+        .fee-amount {
+          font-size: 1.6rem;
+        }
+
+        .registration-info h3 {
+          font-size: 1.3rem;
+          margin-bottom: 1.2rem;
+        }
+
+        .info-card {
+          padding: 1.2rem;
+        }
+
+        .info-card h4 {
+          font-size: 1rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .info-card p {
+          font-size: 0.85rem;
+          line-height: 1.4;
+        }
+
+        .info-icon {
+          font-size: 1.8rem;
+          width: 50px;
+          height: 50px;
+          margin-bottom: 1rem;
+        }
+
+        .page-hero {
+          padding: 70px 0 50px;
+        }
+
+        .page-hero h1 {
+          font-size: 1.9rem;
+          margin-bottom: 0.8rem;
+          padding: 0 0.5rem;
+        }
+
+        .page-hero p {
+          font-size: 0.95rem;
+          max-width: 450px;
+          padding: 0 0.5rem;
+          line-height: 1.4;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .registration-section {
+          padding: 30px 0.5rem 1rem;
+        }
+
+        .registration-content {
+          padding: 1.2rem;
+          border-radius: 8px;
+        }
+
+        .registration-content h1 {
+          font-size: 1.6rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .registration-status {
+          padding: 1.2rem 0.6rem;
+          margin-bottom: 1.5rem;
+          border-radius: 8px;
+        }
+
+        .registration-status h2 {
+          font-size: 1.3rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .registration-status .status-icon i {
+          font-size: 1.8rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .registration-fees {
+          gap: 1rem;
+        }
+
+        .fee-category {
+          min-width: 240px;
+          max-width: 260px;
+          height: 120px;
+          padding: 1rem;
+          border-radius: 8px;
+        }
+
+        .fee-category h3 {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.1;
+        }
+
+        .fee-amount {
+          font-size: 1.4rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .registration-info h3 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+
+        .info-grid {
+          gap: 1rem;
+        }
+
+        .info-card {
+          padding: 1rem;
+          border-radius: 8px;
+        }
+
+        .info-card h4 {
+          font-size: 0.95rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .info-card p {
+          font-size: 0.8rem;
+          line-height: 1.3;
+        }
+
+        .info-icon {
+          font-size: 1.6rem;
+          width: 45px;
+          height: 45px;
+          margin-bottom: 0.8rem;
+        }
+
+        .page-hero {
+          padding: 60px 0 40px;
+        }
+
+        .page-hero h1 {
+          font-size: 1.7rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.2;
+        }
+
+        .page-hero p {
+          font-size: 0.9rem;
+          max-width: 400px;
+          line-height: 1.3;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .registration-section {
+          padding: 25px 0.3rem 0.8rem;
+        }
+
+        .registration-content {
+          padding: 1rem;
+        }
+
+        .registration-content h1 {
+          font-size: 1.4rem;
+          margin-bottom: 1.2rem;
+        }
+
+        .registration-status {
+          padding: 1rem 0.5rem;
+          margin-bottom: 1.2rem;
+        }
+
+        .registration-status h2 {
+          font-size: 1.2rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .registration-status .status-icon i {
+          font-size: 1.6rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .fee-category {
+          min-width: 220px;
+          max-width: 240px;
+          height: 110px;
+          padding: 0.8rem;
+        }
+
+        .fee-category h3 {
+          font-size: 0.85rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .fee-amount {
+          font-size: 1.3rem;
+        }
+
+        .registration-info h3 {
+          font-size: 1.1rem;
+          margin-bottom: 0.8rem;
+        }
+
+        .info-card {
+          padding: 0.8rem;
+        }
+
+        .info-card h4 {
+          font-size: 0.9rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+          font-size: 0.75rem;
+          line-height: 1.2;
+        }
+
+        .info-icon {
+          font-size: 1.4rem;
+          width: 40px;
+          height: 40px;
+          margin-bottom: 0.6rem;
+        }
+
+        .fee-note {
+          font-size: 0.75rem;
+        }
+
+        .container {
+          padding: 0 0.6rem;
         }
       }
     </style>

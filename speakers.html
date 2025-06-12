@@ -9,6 +9,201 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <style>
+      /* Speakers page specific styles */
+      .speakers-intro {
+        text-align: center;
+        padding: 3rem 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .speakers-intro .status-icon {
+        font-size: 3rem;
+        color: #3498db;
+        margin-bottom: 1.5rem;
+        animation: pulse 2s infinite;
+      }
+
+      .speakers-intro h1 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      .speakers-intro .intro-message {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .speakers-list-section {
+        margin-bottom: 3rem;
+      }
+
+      .speakers-table-container {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(52, 152, 219, 0.1);
+        overflow-x: auto;
+      }
+
+      .speakers-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        font-size: 1rem;
+        background: white;
+      }
+
+      .speakers-table thead {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+      }
+
+      .speakers-table th {
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-bottom: 2px solid #2980b9;
+      }
+
+      .speakers-table th:first-child {
+        width: 80px;
+        text-align: center;
+      }
+
+      .speakers-table th:nth-child(2) {
+        min-width: 200px;
+      }
+
+      .speakers-table th:nth-child(3) {
+        min-width: 300px;
+      }
+
+      .speakers-table tbody tr {
+        border-bottom: 1px solid #e9ecef;
+        transition: background-color 0.3s ease;
+      }
+
+      .speakers-table tbody tr:hover {
+        background-color: #f8f9fa;
+      }
+
+      .speakers-table tbody tr:last-child {
+        border-bottom: none;
+      }
+
+      .speakers-table td {
+        padding: 1rem;
+        color: #2c3e50;
+        vertical-align: top;
+      }
+
+      .speakers-table td:first-child {
+        text-align: center;
+        font-weight: 600;
+        color: #3498db;
+      }
+
+      .speakers-table td:nth-child(2) {
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .speakers-table td:nth-child(3) {
+        color: #555;
+        line-height: 1.4;
+      }
+
+      /* Pulse animation for the icon */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Responsive styles for speakers page */
+      @media (max-width: 768px) {
+        .speakers-intro {
+          padding: 2rem 1rem;
+        }
+
+        .speakers-intro h1 {
+          font-size: 2rem;
+        }
+
+        .speakers-intro .intro-message {
+          font-size: 1.1rem;
+        }
+
+        .speakers-table-container {
+          padding: 1rem;
+          margin: 0 -1rem;
+        }
+
+        .speakers-table {
+          font-size: 0.9rem;
+        }
+
+        .speakers-table th,
+        .speakers-table td {
+          padding: 0.75rem 0.5rem;
+        }
+
+        .speakers-table th {
+          font-size: 1rem;
+        }
+
+        .speakers-table th:nth-child(2),
+        .speakers-table th:nth-child(3) {
+          min-width: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .speakers-intro {
+          padding: 1.5rem 0.5rem;
+        }
+
+        .speakers-intro h1 {
+          font-size: 1.8rem;
+        }
+
+        .speakers-intro .intro-message {
+          font-size: 1rem;
+        }
+
+        .speakers-table-container {
+          padding: 0.5rem;
+          margin: 0 -0.5rem;
+        }
+
+        .speakers-table {
+          font-size: 0.85rem;
+        }
+
+        .speakers-table th,
+        .speakers-table td {
+          padding: 0.5rem 0.3rem;
+        }
+
+        .speakers-table th {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -22,61 +217,93 @@
         </p>
       </div>
     </section>
-
     <main class="speakers-section">
       <div class="speakers-content">
-        <h1>Speakers</h1>
-
-        <div class="speakers-status">
+        <div class="speakers-intro">
           <div class="status-icon">
             <i class="fas fa-microphone"></i>
           </div>
-          <h2>Speaker Information Coming Soon</h2>
-          <p class="status-message">
-            We are finalizing our lineup of distinguished speakers for the
-            Symposium on Advances in Thermo-Fluid Sciences. Stay tuned for
-            announcements of renowned experts who will share their insights and
-            cutting-edge research.
+          <h1>Distinguished Speakers</h1>
+          <p class="intro-message">
+            We are pleased to announce our lineup of distinguished speakers for
+            the Symposium on Advances in Thermo-Fluid Sciences. These renowned
+            experts will share their insights and cutting-edge research.
           </p>
         </div>
 
-        <div class="speakers-info">
-          <h3>What to Expect</h3>
-          <div class="info-grid">
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <h4>Keynote Speakers</h4>
-              <p>
-                Distinguished researchers and industry leaders who will deliver
-                inspiring keynote presentations on breakthrough advances in
-                thermo-fluid sciences.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-chalkboard-teacher"></i>
-              </div>
-              <h4>Invited Speakers</h4>
-              <p>
-                Subject matter experts presenting specialized topics covering
-                fluid mechanics, heat transfer, and thermal engineering
-                applications.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-industry"></i>
-              </div>
-              <h4>Industry Experts</h4>
-              <p>
-                Professionals from leading companies sharing practical insights
-                and real-world applications of thermo-fluid technologies.
-              </p>
-            </div>
+        <div class="speakers-list-section">
+          <div class="speakers-table-container">
+            <table class="speakers-table">
+              <thead>
+                <tr>
+                  <th>S No</th>
+                  <th>Name</th>
+                  <th>Affiliated Department and Institute</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Prof. Gautam Biswas</td>
+                  <td>BITS Pilani</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Prof. Kirti C Sahu</td>
+                  <td>IIT Hyderabad</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Prof. Stephane Zaleski</td>
+                  <td>Sorbonne University</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Prof. Ashutosh Sharma</td>
+                  <td>IIT Kanpur</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Prof. Suman Chakraborty</td>
+                  <td>IIT Kharagpur</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Prof. Raj C Chhabra</td>
+                  <td>Shiv Nadar University</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Dr. Naresh Chandra Murmu</td>
+                  <td>CSIR-CMERI, Durgapur</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Prof. Ganesh Natarajan</td>
+                  <td>IIT Palakkad</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Prof. Yogesh G. Bhumkar</td>
+                  <td>IIT Bhubaneswar</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Prof. Ravi K Arun</td>
+                  <td>IIT Jammu</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Prof. Abhiram Hens</td>
+                  <td>NIT Durgapur</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Prof. Atul Sharma</td>
+                  <td>IIT Bombay</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

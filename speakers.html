@@ -39,86 +39,84 @@
         line-height: 1.6;
       }
 
-      .speakers-list-section {
+      .speakers-grid-section {
         margin-bottom: 3rem;
       }
 
-      .speakers-table-container {
+      .speakers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 0 1rem;
+      }
+
+      .speaker-card {
         background: #ffffff;
-        border-radius: 10px;
-        padding: 2rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(52, 152, 219, 0.1);
-        overflow-x: auto;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
-      .speakers-table {
+      .speaker-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        border-color: rgba(52, 152, 219, 0.3);
+      }
+
+      .speaker-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        border: 4px solid #3498db;
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+      }
+
+      .speaker-image img {
         width: 100%;
-        border-collapse: collapse;
-        margin: 0;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .speaker-card:hover .speaker-image img {
+        transform: scale(1.05);
+      }
+
+      .speaker-info h3 {
+        font-size: 1.3rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .speaker-title {
         font-size: 1rem;
-        background: white;
-      }
-
-      .speakers-table thead {
-        background: linear-gradient(135deg, #3498db, #2980b9);
-        color: white;
-      }
-
-      .speakers-table th {
-        padding: 1rem;
-        text-align: left;
-        font-weight: 600;
-        font-size: 1.1rem;
-        border-bottom: 2px solid #2980b9;
-      }
-
-      .speakers-table th:first-child {
-        width: 80px;
-        text-align: center;
-      }
-
-      .speakers-table th:nth-child(2) {
-        min-width: 200px;
-      }
-
-      .speakers-table th:nth-child(3) {
-        min-width: 300px;
-      }
-
-      .speakers-table tbody tr {
-        border-bottom: 1px solid #e9ecef;
-        transition: background-color 0.3s ease;
-      }
-
-      .speakers-table tbody tr:hover {
-        background-color: #f8f9fa;
-      }
-
-      .speakers-table tbody tr:last-child {
-        border-bottom: none;
-      }
-
-      .speakers-table td {
-        padding: 1rem;
-        color: #2c3e50;
-        vertical-align: top;
-      }
-
-      .speakers-table td:first-child {
-        text-align: center;
-        font-weight: 600;
         color: #3498db;
-      }
-
-      .speakers-table td:nth-child(2) {
         font-weight: 600;
-        color: #2c3e50;
+        margin-bottom: 0.8rem;
       }
 
-      .speakers-table td:nth-child(3) {
+      .speaker-affiliation {
+        font-size: 0.95rem;
         color: #555;
         line-height: 1.4;
+        margin-bottom: 0.8rem;
+        font-weight: 500;
+      }
+
+      .speaker-details {
+        font-size: 0.9rem;
+        color: #777;
+        line-height: 1.3;
+        font-style: italic;
       }
 
       /* Pulse animation for the icon */
@@ -148,27 +146,36 @@
           font-size: 1.1rem;
         }
 
-        .speakers-table-container {
-          padding: 1rem;
-          margin: 0 -1rem;
+        .speakers-grid {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 1.5rem;
+          padding: 0 0.5rem;
         }
 
-        .speakers-table {
+        .speaker-card {
+          padding: 1.2rem;
+        }
+
+        .speaker-image {
+          width: 120px;
+          height: 120px;
+          margin-bottom: 1.2rem;
+        }
+
+        .speaker-info h3 {
+          font-size: 1.2rem;
+        }
+
+        .speaker-title {
+          font-size: 0.95rem;
+        }
+
+        .speaker-affiliation {
           font-size: 0.9rem;
         }
 
-        .speakers-table th,
-        .speakers-table td {
-          padding: 0.75rem 0.5rem;
-        }
-
-        .speakers-table th {
-          font-size: 1rem;
-        }
-
-        .speakers-table th:nth-child(2),
-        .speakers-table th:nth-child(3) {
-          min-width: auto;
+        .speaker-details {
+          font-size: 0.85rem;
         }
       }
 
@@ -185,22 +192,36 @@
           font-size: 1rem;
         }
 
-        .speakers-table-container {
-          padding: 0.5rem;
-          margin: 0 -0.5rem;
+        .speakers-grid {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+          padding: 0 0.2rem;
         }
 
-        .speakers-table {
+        .speaker-card {
+          padding: 1rem;
+        }
+
+        .speaker-image {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 1rem;
+        }
+
+        .speaker-info h3 {
+          font-size: 1.1rem;
+        }
+
+        .speaker-title {
+          font-size: 0.9rem;
+        }
+
+        .speaker-affiliation {
           font-size: 0.85rem;
         }
 
-        .speakers-table th,
-        .speakers-table td {
-          padding: 0.5rem 0.3rem;
-        }
-
-        .speakers-table th {
-          font-size: 0.9rem;
+        .speaker-details {
+          font-size: 0.8rem;
         }
       }
     </style>
@@ -231,79 +252,215 @@
           </p>
         </div>
 
-        <div class="speakers-list-section">
-          <div class="speakers-table-container">
-            <table class="speakers-table">
-              <thead>
-                <tr>
-                  <th>S No</th>
-                  <th>Name</th>
-                  <th>Affiliated Department and Institute</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Prof. Gautam Biswas</td>
-                  <td>BITS Pilani</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Prof. Kirti C Sahu</td>
-                  <td>IIT Hyderabad</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Prof. Stephane Zaleski</td>
-                  <td>Sorbonne University</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Prof. Ashutosh Sharma</td>
-                  <td>IIT Kanpur</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Prof. Suman Chakraborty</td>
-                  <td>IIT Kharagpur</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Prof. Raj C Chhabra</td>
-                  <td>Shiv Nadar University</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Dr. Naresh Chandra Murmu</td>
-                  <td>CSIR-CMERI, Durgapur</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Prof. Ganesh Natarajan</td>
-                  <td>IIT Palakkad</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Prof. Yogesh G. Bhumkar</td>
-                  <td>IIT Bhubaneswar</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Prof. Ravi K Arun</td>
-                  <td>IIT Jammu</td>
-                </tr>
-                <tr>
-                  <td>11</td>
-                  <td>Prof. Abhiram Hens</td>
-                  <td>NIT Durgapur</td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>Prof. Atul Sharma</td>
-                  <td>IIT Bombay</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="speakers-grid-section">
+          <div class="speakers-grid">
+            <!-- Speaker 1 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Gautam Biswas.jpg" alt="Prof. Gautam Biswas" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Gautam Biswas</h3>
+                <p class="speaker-title">Senior Professor Emeritus</p>
+                <p class="speaker-affiliation">Department of Mechanical Engineering, BITS-Pilani, K K Birla Goa Campus</p>
+                <p class="speaker-details">Ex-Director IIT Guwahati (2013-2019), Ex-Director CMERI Durgapur (2009-2013)</p>
+              </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Ashutosh Sharma.jpg" alt="Prof. Ashutosh Sharma" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Ashutosh Sharma</h3>
+                <p class="speaker-title">Institute Chair Professor</p>
+                <p class="speaker-affiliation">Department of Chemical Engineering, Indian Institute of Technology Kanpur</p>
+                <p class="speaker-details">Ex-secretary, DST, Government of India</p>
+              </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Raj Chhabra.jpg" alt="Prof. Raj P. Chhabra" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Raj P. Chhabra</h3>
+                <p class="speaker-title">Professor</p>
+                <p class="speaker-affiliation">School of Engineering, Department of Chemical Engineering, Shiv Nadar University</p>
+                <p class="speaker-details">Ex: Visiting Professor, IIT Ropar. Ex: Professor, IIT Kanpur</p>
+              </div>
+            </div>
+
+            <!-- Speaker 4 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof S Zaleski.jpg" alt="Prof. Stéphane Zaleski" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Stéphane Zaleski</h3>
+                <p class="speaker-title">Professor of Mechanics</p>
+                <p class="speaker-affiliation">Sorbonne Université, Institut Jean Le Rond D'Alembert</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 5 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Suman Chakraborty.jpg" alt="Prof. Suman Chakraborty" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Suman Chakraborty</h3>
+                <p class="speaker-title">Director, IIT Kharagpur</p>
+                <p class="speaker-affiliation">Sir J. C. Bose National Fellow, Department of Mechanical Engineering, Indian Institute of Technology Kharagpur</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 6 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Dr N C Murmu.jpg" alt="Dr. Naresh Chandra Murmu" />
+              </div>
+              <div class="speaker-info">
+                <h3>Dr. Naresh Chandra Murmu</h3>
+                <p class="speaker-title">Director, CSIR - CMERI</p>
+                <p class="speaker-affiliation">Chief Scientist, Surface Engineering and Tribology Group</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 7 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Dr Nagahanumaiah.jpg" alt="Dr. Nagahanumalah" />
+              </div>
+              <div class="speaker-info">
+                <h3>Dr. Nagahanumalah</h3>
+                <p class="speaker-title">Director</p>
+                <p class="speaker-affiliation">Central Manufacturing Technology Institute</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 8 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Atul Sharma.jpg" alt="Prof. Atul Sharma" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Atul Sharma</h3>
+                <p class="speaker-title">Rahul Bajaj Chair Professor & Head</p>
+                <p class="speaker-affiliation">Department of Mechanical Engineering, Indian Institute of Technology Bombay</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 9 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Kirti C Sahu.jpg" alt="Prof. Kirti Chandra Sahu" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Kirti Chandra Sahu</h3>
+                <p class="speaker-title">Professor</p>
+                <p class="speaker-affiliation">Department of Chemical Engineering, Indian Institute of Technology Hyderabad</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 10 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Ganesh Natarajan.jpg" alt="Prof. Ganesh Natarajan" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Ganesh Natarajan</h3>
+                <p class="speaker-title">Associate Professor</p>
+                <p class="speaker-affiliation">Department of Mechanical Engineering, Indian Institute of Technology Palakkad</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 11 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Yogesh G Bhumkar.jpg" alt="Prof. Yogesh G. Bhumkar" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Yogesh G. Bhumkar</h3>
+                <p class="speaker-title">Associate Professor</p>
+                <p class="speaker-affiliation">School of Mechanical Sciences, Indian Institute of Technology Bhubaneswar</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 12 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Ravi Kumar Arun.jpeg" alt="Prof. Ravi Kumar Arun" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Ravi Kumar Arun</h3>
+                <p class="speaker-title">Assistant Professor</p>
+                <p class="speaker-affiliation">Department of Chemical Engineering, Indian Institute of Technology Jammu</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 13 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Abhiram Hens.jpg" alt="Prof. Abhiram Hens" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Abhiram Hens</h3>
+                <p class="speaker-title">Assistant Professor</p>
+                <p class="speaker-affiliation">Department of Chemical Engineering, National Institute of Technology Durgapur</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 14 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Manas Ranjan Behera.jpg" alt="Prof. Manas Ranjan Behera" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Manas Ranjan Behera</h3>
+                <p class="speaker-title">Assistant Professor</p>
+                <p class="speaker-affiliation">Department of Chemical Engineering, BITS-Pilani, K K Birla Goa Campus</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 15 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Ashis Kumar Sen.jpg" alt="Prof. Ashis Kumar Sen" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Ashis Kumar Sen</h3>
+                <p class="speaker-title">Professor</p>
+                <p class="speaker-affiliation">Department of Mechanical Engineering, Indian Institute of Technology Madras</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
+
+            <!-- Speaker 16 -->
+            <div class="speaker-card">
+              <div class="speaker-image">
+                <img src="assets/speaker-images/Prof Abhishek Kundu.jpeg" alt="Prof. Abhishek Kundu" />
+              </div>
+              <div class="speaker-info">
+                <h3>Prof. Abhishek Kundu</h3>
+                <p class="speaker-title">Assistant Professor</p>
+                <p class="speaker-affiliation">Department of Applied Mechanics, MNNIT Allahabad</p>
+                <p class="speaker-details"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
